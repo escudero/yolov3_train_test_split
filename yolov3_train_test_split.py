@@ -40,7 +40,7 @@ def split(data_file, train_file, test_file, test_size=0.2, random_state=None, de
         klass = 'X'
       target.append(klass)
 
-  X_train, X_test, y_train, y_test = train_test_split(values, target, test_size=debug, random_state=random_state)
+  X_train, X_test, y_train, y_test = train_test_split(values, target, test_size=test_size, random_state=random_state)
 
   with open(train_file, 'w') as filehandle:
     filehandle.writelines(f"{line}\n" for line in X_train)
